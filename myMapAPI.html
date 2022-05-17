@@ -30,11 +30,11 @@ var marker = new kakao.maps.Marker({
 
 // 이 함수를 호출해서 센터 위치를 바꿀 거임
 function setCenter(lat, lng) {
-    marker.setMap(null) // 지도에서 마커 제거
+    marker.setMap(null) //지도 위의 마커 제거
     var pos = new kakao.maps.LatLng(lat, lng)
     map.setCenter(pos)
     marker = new kakao.maps.Marker({position:pos})
-    marker = setMap(map)
+    marker.setMap(map)
 }
 
 // 마커가 지도 위에 표시되도록 설정합니다
